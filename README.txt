@@ -1,0 +1,1 @@
+This is a 2D platform game inspired by Hollow Knight / Silk Song. 
