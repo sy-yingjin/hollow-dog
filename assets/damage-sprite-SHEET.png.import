@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg30xpo7ujg4c"
-path="res://.godot/imported/silkgou-sprite-SHEET.png-4b8292911375b371ac3a4fc22a9c850e.ctex"
+uid="uid://ceig6pdm5r41k"
+path="res://.godot/imported/damage-sprite-SHEET.png-86446fc29ca6698b7d46372023049e7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/silkgou-sprite-SHEET.png"
-dest_files=["res://.godot/imported/silkgou-sprite-SHEET.png-4b8292911375b371ac3a4fc22a9c850e.ctex"]
+source_file="res://assets/damage-sprite-SHEET.png"
+dest_files=["res://.godot/imported/damage-sprite-SHEET.png-86446fc29ca6698b7d46372023049e7c.ctex"]
 
 [params]
 
