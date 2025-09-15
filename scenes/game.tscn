@@ -8,9 +8,10 @@ distance = -3.0
 [node name="Game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_lqx1x")]
+position = Vector2(0, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(16, -1)
+position = Vector2(0, -50)
 zoom = Vector2(4, 4)
 
 [node name="temporary_land" type="StaticBody2D" parent="."]
