@@ -48,7 +48,9 @@ jump={
 2d_physics/layer_1="Regular Collision"
 2d_physics/layer_2="One Way Platforms"
 2d_physics/layer_3="Damage"
-2d_physics/layer_4="Acid"
+2d_physics/layer_4="Layer 4"
+2d_physics/layer_7="Player"
+2d_physics/layer_8="Acid"
 
 [rendering]
 

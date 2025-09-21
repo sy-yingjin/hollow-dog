@@ -59,7 +59,7 @@ texture = ExtResource("12_ttxmv")
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_5yrt3"]
-physics_layer_0/collision_layer = 8
+physics_layer_0/collision_layer = 128
 sources/0 = SubResource("TileSetAtlasSource_hbk0w")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuime"]
@@ -697,6 +697,7 @@ tile_set = SubResource("TileSet_jw1ax")
 
 [node name="player" parent="." instance=ExtResource("1_lqx1x")]
 position = Vector2(-414, 317)
+collision_layer = 64
 collision_mask = 7
 
 [node name="Camera2D" type="Camera2D" parent="player"]
