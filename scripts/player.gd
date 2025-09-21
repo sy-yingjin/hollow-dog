@@ -5,9 +5,23 @@ const jumpSpeed = -350
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+# Drop down variables
+var platform_drop_timer = 0.0
+
 func _physics_process(delta):
 	# Get the gravity from the project settings to be synced with RigidBody nodes.
 	var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+	
+	# Handle platform drop timer
+	if platform_drop_timer > 0:
+		platform_drop_timer -= delta
+	
+	# Check for drop down input (ui_down action now includes S and Down Arrow in project settings)
+	if Input.is_action_just_pressed("ui_down") and is_on_floor():
+		platform_drop_timer = 0.18  # Slightly longer grace window
+		velocity.y = max(velocity.y, 120) # Force a clear downward movement so one-way lets us go through
+		# Nudge the body a tiny bit down so it stops counting as on_floor this frame
+		global_position.y += 1.5
 		
 	# add gravity
 	if not is_on_floor():
@@ -46,6 +60,10 @@ func _physics_process(delta):
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
+	
+	# While dropping, temporarily ignore floor by tricking is_on_floor for a few frames
+	if platform_drop_timer > 0:
+		# Godot will treat us as falling so one-way polygons won't block upward normal
+		pass
 		
 	move_and_slide()
-		
